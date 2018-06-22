@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CanvasDraw" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhn-Zf-jAT">
+                                <rect key="frame" x="169.66666666666666" y="44" width="36" height="30"/>
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="btnClearClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rLx-js-wLt"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4pJ-5p-3NN" customClass="MyCanvas" customModule="CanvasDraw" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="82" width="375" height="475"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGK-Ph-Vif">
+                                <rect key="frame" x="0.0" y="588" width="375" height="30"/>
+                                <state key="normal" title="Set Background"/>
+                                <connections>
+                                    <action selector="btnSetBackgroundClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KbK-Wm-N4T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mq-2N-GCU">
+                                <rect key="frame" x="0.0" y="626" width="375" height="30"/>
+                                <state key="normal" title="Clear Background"/>
+                                <connections>
+                                    <action selector="clearBackgroundClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yUi-Pq-hQh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yGK-Ph-Vif" firstAttribute="top" secondItem="4pJ-5p-3NN" secondAttribute="bottom" constant="31" id="D7d-hI-3zO"/>
+                            <constraint firstItem="4pJ-5p-3NN" firstAttribute="top" secondItem="fhn-Zf-jAT" secondAttribute="bottom" constant="8" symbolic="YES" id="DDB-ia-pKS"/>
+                            <constraint firstItem="fhn-Zf-jAT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GNe-Ha-wdP"/>
+                            <constraint firstItem="7mq-2N-GCU" firstAttribute="trailing" secondItem="yGK-Ph-Vif" secondAttribute="trailing" id="Xpt-Lo-wK6"/>
+                            <constraint firstItem="4pJ-5p-3NN" firstAttribute="leading" secondItem="yGK-Ph-Vif" secondAttribute="leading" id="Zaz-y5-klR"/>
+                            <constraint firstItem="7mq-2N-GCU" firstAttribute="top" secondItem="yGK-Ph-Vif" secondAttribute="bottom" constant="8" symbolic="YES" id="ZjE-aY-ZyY"/>
+                            <constraint firstItem="7mq-2N-GCU" firstAttribute="leading" secondItem="yGK-Ph-Vif" secondAttribute="leading" id="ek4-nn-Zi2"/>
+                            <constraint firstItem="4pJ-5p-3NN" firstAttribute="centerX" secondItem="fhn-Zf-jAT" secondAttribute="centerX" id="frU-2x-7fV"/>
+                            <constraint firstItem="4pJ-5p-3NN" firstAttribute="trailing" secondItem="yGK-Ph-Vif" secondAttribute="trailing" id="fyQ-VQ-Wrz"/>
+                            <constraint firstItem="4pJ-5p-3NN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gc5-MH-B6k"/>
+                            <constraint firstAttribute="bottom" secondItem="4pJ-5p-3NN" secondAttribute="bottom" constant="255" id="lpz-2Z-O7g"/>
+                            <constraint firstAttribute="trailing" secondItem="4pJ-5p-3NN" secondAttribute="trailing" id="w2q-wX-Fir"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnClear" destination="fhn-Zf-jAT" id="ib7-NM-bSX"/>
+                        <outlet property="canvasView" destination="4pJ-5p-3NN" id="GcW-2T-2cu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="133.74384236453201"/>
+        </scene>
+    </scenes>
+</document>
